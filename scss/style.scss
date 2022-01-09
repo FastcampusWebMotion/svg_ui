@@ -192,6 +192,22 @@ body {
                     left: 0px;
                     opacity: 0;
                     transition: 0.8s;
+
+                    .pic {
+                        width: 33vw;
+                        position: absolute;
+                        bottom: 5vh;
+                        right: -5vw;
+
+                        path {
+                            stroke: #111;
+                            stroke-width: 1;
+                            fill: rgba(0,0,0,0);
+                            stroke-dasharray: 2400;
+                            stroke-dashoffset: 2400;
+                            transition: stroke-dashoffset 2s 0.5s, fill 0.5s 1.5s;
+                        }
+                    }
                 }
 
                 &:nth-of-type(1) .bg {
@@ -210,6 +226,11 @@ body {
                 &.on .bg {
                     opacity: 1;
                     transform: translateY(0%) rotateX(0deg);
+
+                    path {
+                        fill: rgba(0,0,0,.5);
+                        stroke-dashoffset: 0;
+                    }
                 }
                 &.up .bg {
                     opacity: 0; 

@@ -191,6 +191,20 @@ body main .panel li .bg {
   opacity: 0;
   transition: 0.8s;
 }
+body main .panel li .bg .pic {
+  width: 33vw;
+  position: absolute;
+  bottom: 5vh;
+  right: -5vw;
+}
+body main .panel li .bg .pic path {
+  stroke: #111;
+  stroke-width: 1;
+  fill: rgba(0, 0, 0, 0);
+  stroke-dasharray: 2400;
+  stroke-dashoffset: 2400;
+  transition: stroke-dashoffset 2s 0.5s, fill 0.5s 1.5s;
+}
 body main .panel li:nth-of-type(1) .bg {
   background: #c7f5fd;
 }
@@ -206,6 +220,10 @@ body main .panel li:nth-of-type(4) .bg {
 body main .panel li.on .bg {
   opacity: 1;
   transform: translateY(0%) rotateX(0deg);
+}
+body main .panel li.on .bg path {
+  fill: rgba(0, 0, 0, 0.5);
+  stroke-dashoffset: 0;
 }
 body main .panel li.up .bg {
   opacity: 0;
